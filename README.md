@@ -1,52 +1,16 @@
 # ember-migrate-global-app
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Example EmberCLI project with a custom resolver and module wrapper:
 
-## Prerequisites
+- [Resolver](https://github.com/Darep/ember-migrate-global-app/blob/master/app/resolver.js) adds support for using underscores in Ember.js files
+- [Module wrapper](https://github.com/Darep/ember-migrate-global-app/blob/master/app/app.js#L7) adds support for declaring Ember.js components, controllers, models, routes etc. with the legacy `App.FooComponent` pattern (only one module per file though!)
 
-You will need the following things properly installed on your computer.
+Note that the resolver and module wrapper are both shipped in the JS bundle and will be executed in the client's browser! My personal advice is to not run this indefinitely but only during the migration process to EmberCLI's conventions.
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with NPM)
-* [Bower](https://bower.io/)
-* [Ember CLI](https://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+## Usage
 
-## Installation
+Copy the resolver and module wrapper to your EmberCLI project and modify them to your needs. E.g. if your directory structure does not conform to EmberCLI's convention, you can modify the module paths with the [resolver](https://github.com/Darep/ember-migrate-global-app/blob/master/app/resolver.js).
 
-* `git clone <repository-url>` this repository
-* `cd ember-migrate-global-app`
-* `npm install`
-* `bower install`
+## License
 
-## Running / Development
-
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+MIT
