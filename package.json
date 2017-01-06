@@ -1,9 +1,9 @@
 {
   "name": "ember-migrate-global-app",
-  "version": "0.0.0",
-  "description": "Small description for ember-migrate-global-app goes here",
+  "version": "0.0.1",
+  "description": "EmberCLI project with global App.FooComponent modules",
   "license": "MIT",
-  "author": "",
+  "author": "Darep",
   "directories": {
     "doc": "doc",
     "test": "tests"
